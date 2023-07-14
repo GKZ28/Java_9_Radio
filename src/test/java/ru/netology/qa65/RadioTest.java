@@ -51,8 +51,8 @@ public class RadioTest {
     public void shouldSetStation () {
         Radio radio = new Radio();
 
-        int expected = 10;
-        radio.setCurrentStation(10);
+        int expected =5;
+        radio.setCurrentStation(5);
         int actual = radio.currentStation;
 
         Assertions.assertEquals(expected, actual);

@@ -6,11 +6,8 @@ public class Radio {
 
     public int getCurrentVolume() {
         return currentVolume;
-    }  // узнать громкость
-
-    public int getCurrentStation() {
-        return currentStation;
-    } // узнать станцию
+    }  // Узнать громкость
+    public int getCurrentStation() {return currentStation;} // узнать станцию
 
     public void setCurrentVolume(int newCurrentVolume) { // Выставить громкость
         if (newCurrentVolume > 100) {
@@ -35,9 +32,18 @@ public class Radio {
         }
     }
 
-    public int setCurrentStation(int newCurrentStation) { // выставить станцию
-        return currentStation = newCurrentStation;
+    public void setCurrentStation(int newCurrentStation) { // выставить станцию
+       if ( newCurrentStation > 9) {
+           currentStation = 9;
+       } else if (newCurrentStation < 0) {
+           currentStation = 0;
+        } else {
+           currentStation = newCurrentStation; }
     }
+
+
+
+
 
 }
 
