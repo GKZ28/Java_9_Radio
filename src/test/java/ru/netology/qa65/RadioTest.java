@@ -58,4 +58,30 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test // ПЕРЕУЛЮЧЕНИЕ СТАНЦИИ ВПЕРЕД
+
+    public void testNextStation () {
+        Radio radio = new Radio();
+
+        int expected =6;
+        radio.setCurrentStation(5);
+        radio.nextStation();
+        int actual = radio.currentStation;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test // ПЕРЕУЛЮЧЕНИЕ СТАНЦИИ НАЗАД
+
+    public void testPreviewStation () {
+        Radio radio = new Radio();
+
+        int expected =4;
+        radio.setCurrentStation(5);
+        radio.previewStation();
+        int actual = radio.currentStation;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 }

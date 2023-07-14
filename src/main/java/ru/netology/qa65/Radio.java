@@ -41,6 +41,17 @@ public class Radio {
            currentStation = newCurrentStation; }
     }
 
+    public void nextStation () { // Переключить станцию вперед
+        if (currentStation < 9) {
+            currentStation++;
+        } else { currentStation = 0;}
+    }
+
+    public void previewStation () { // Переключить станцию назад
+        if (currentStation > 0) {
+            currentStation--;
+        } else { currentStation = 9;}
+    }
 
 
 
