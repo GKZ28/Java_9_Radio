@@ -108,10 +108,10 @@ public class RadioTest {
 
     @Test // ПРОВЕРКА ВЫСТАВЛЕНИЯ СТАНЦИИ
 
-    public void shouldSetStation () {
+    public void shouldSetStation() {
         Radio radio = new Radio();
 
-        int expected =5;
+        int expected = 5;
         radio.setCurrentStation(5);
         int actual = radio.getCurrentStation();
 
@@ -120,76 +120,76 @@ public class RadioTest {
 
     @Test // ПЕРЕКЛЮЧЕНИЕ СТАНЦИИ ВПЕРЕД
 
-    public void testNextStation () {
+    public void testNextStation() {
         Radio radio = new Radio();
 
-        int expected =5;
+        int expected = 5;
         radio.setCurrentStation(4);
         radio.nextStation();
-        int actual = radio.currentStation;
+        int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test // ПЕРЕКЛЮЧЕНИЕ СТАНЦИИ НАЗАД
 
-    public void testPreviewStation () {
+    public void testPreviewStation() {
         Radio radio = new Radio();
 
-        int expected =3;
+        int expected = 3;
         radio.setCurrentStation(4);
         radio.previewStation();
-        int actual = radio.currentStation;
+        int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test // ПЕРЕКЛЮЧЕНИЕ СТАНЦИИ ВПЕРЕД ПОГРАНИЧНОЕ ЗНАЧЕНИЕ
 
-    public void testNextStationMax () {
+    public void testNextStationMax() {
         Radio radio = new Radio();
 
-        int expected =0;
+        int expected = 0;
         radio.setCurrentStation(9);
         radio.nextStation();
-        int actual = radio.currentStation;
+        int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test // ПЕРЕКЛЮЧЕНИЕ СТАНЦИИ НАЗАД ПОГРАНИЧНОЕ ЗНАЧЕНИЕ
 
-    public void testPreviewStationMin () {
+    public void testPreviewStationMin() {
         Radio radio = new Radio();
 
-        int expected =9;
+        int expected = 9;
         radio.setCurrentStation(0);
         radio.previewStation();
-        int actual = radio.currentStation;
+        int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test // ПРОВЕРКА ВЫСТАВЛЕНИЯ СТАНЦИИ ВЫШЕ ГРАНИЦ
 
-    public void shouldSetStationAboveMax () {
+    public void shouldSetStationAboveMax() {
         Radio radio = new Radio();
 
-        int expected =9;
+        int expected = 9;
         radio.setCurrentStation(10);
-        int actual = radio.currentStation;
+        int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test // ПРОВЕРКА ВЫСТАВЛЕНИЯ СТАНЦИИ НИЖЕ ГРАНИЦ
 
-    public void shouldSetStationBelowMax () {
+    public void shouldSetStationBelowMax() {
         Radio radio = new Radio();
 
-        int expected =0;
+        int expected = 0;
         radio.setCurrentStation(-1);
-        int actual = radio.currentStation;
+        int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
     }
