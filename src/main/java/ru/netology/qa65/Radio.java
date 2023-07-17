@@ -1,16 +1,54 @@
 package ru.netology.qa65;
 
 public class Radio {
-    private int currentVolume; // значение громкости
-    private int currentStation; // значение станции
+
+    int numberOfStations = 10; // Количество станций
+    private int currentStation = 0; // значение станции
+    private int currentVolume = 0; // значение громкости
+    int lastStation = numberOfStations - 1; // номер последней станции
+
+    public Radio (int numberOfStations) {
+        this.numberOfStations = numberOfStations;
+        this.lastStation = numberOfStations - 1;
+      }
+
+    public Radio() {}
+
+    public int getCurrentStation() {return currentStation;} // узнать станцию
+
+    public void setCurrentStation(int newCurrentStation) { // выставить станцию
+        if (newCurrentStation > lastStation) {
+            currentStation = lastStation;
+        } else if (newCurrentStation < 0) {
+            currentStation = 0;
+        } else {
+            currentStation = newCurrentStation;
+        }
+    }
+
+    public void nextStation() { // Переключить станцию вперед
+        if (currentStation < lastStation) {
+            currentStation++;
+        } else {
+            currentStation = 0;
+        }
+    }
+
+    public void previewStation() { // Переключить станцию назад
+        if (currentStation > 0) {
+            currentStation--;
+        } else {
+            currentStation = lastStation;
+        }
+    }
+
+
+
+    //__________________________________________________________________________________-
 
     public int getCurrentVolume() {
         return currentVolume;
     }  // Узнать громкость
-
-    public int getCurrentStation() {
-        return currentStation;
-    } // узнать станцию
 
     public void setCurrentVolume(int newCurrentVolume) { // Выставить громкость
         if (newCurrentVolume > 100) {
@@ -33,32 +71,5 @@ public class Radio {
             currentVolume--;
         }
     }
-
-    public void setCurrentStation(int newCurrentStation) { // выставить станцию
-        if (newCurrentStation > 9) {
-            currentStation = 9;
-        } else if (newCurrentStation < 0) {
-            currentStation = 0;
-        } else {
-            currentStation = newCurrentStation;
-        }
-    }
-
-    public void nextStation() { // Переключить станцию вперед
-        if (currentStation < 9) {
-            currentStation++;
-        } else {
-            currentStation = 0;
-        }
-    }
-
-    public void previewStation() { // Переключить станцию назад
-        if (currentStation > 0) {
-            currentStation--;
-        } else {
-            currentStation = 9;
-        }
-    }
-
 
 }
