@@ -174,12 +174,12 @@ public class RadioTest {
 
     public void shouldSetStationBelowMax() {
 
+        Radio radio1 = new Radio();
         int expected = 0;
         radio.setCurrentStation(-1);
         int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
-        System.out.println(radio.lastStation);
-        System.out.println(radio.numberOfStations);
+
     }
 }
