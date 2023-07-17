@@ -2,10 +2,10 @@ package ru.netology.qa65;
 
 public class Radio {
 
-    int numberOfStations = 10; // Количество станций
+    private int numberOfStations = 10; // Количество станций
     private int currentStation = 0; // значение станции
     private int currentVolume = 0; // значение громкости
-    int lastStation = numberOfStations - 1; // номер последней станции
+    private int lastStation = numberOfStations - 1; // номер последней станции
 
     public Radio (int numberOfStations) {
         this.numberOfStations = numberOfStations;
