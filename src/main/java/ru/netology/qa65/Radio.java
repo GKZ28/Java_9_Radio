@@ -1,33 +1,41 @@
 package ru.netology.qa65;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
 
-    int numberOfStations = 10; // Количество станций
+    private int numberOfStations = 10; // Количество станций
     private int currentStation = 0; // значение станции
     private int currentVolume = 0; // значение громкости
-    int lastStation = numberOfStations - 1; // номер последней станции
 
-    public Radio (int numberOfStations) {
-        this.numberOfStations = numberOfStations;
-        this.lastStation = numberOfStations - 1;
-      }
 
-    public Radio() {}
-
-    public int getCurrentStation() {return currentStation;} // узнать станцию
-
+//    public Radio (int numberOfStations) {
+//        this.numberOfStations = numberOfStations;
+//        this.lastStation = numberOfStations - 1;
+//      }
+//
+//    public Radio() {}
+//
+//    public int getCurrentStation() {return currentStation;} // узнать станцию
+//
     public void setCurrentStation(int newCurrentStation) { // выставить станцию
-        if (newCurrentStation > lastStation) {
-            currentStation = lastStation;
+        if (newCurrentStation > numberOfStations - 1) {
+            currentStation = numberOfStations - 1;
         } else if (newCurrentStation < 0) {
             currentStation = 0;
         } else {
             currentStation = newCurrentStation;
         }
     }
-
+//
     public void nextStation() { // Переключить станцию вперед
-        if (currentStation < lastStation) {
+        if (currentStation < numberOfStations - 1) {
             currentStation++;
         } else {
             currentStation = 0;
@@ -38,18 +46,18 @@ public class Radio {
         if (currentStation > 0) {
             currentStation--;
         } else {
-            currentStation = lastStation;
+            currentStation = numberOfStations - 1;
         }
     }
-
-
-
-    //__________________________________________________________________________________-
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }  // Узнать громкость
-
+//
+//
+//
+//    //__________________________________________________________________________________-
+//
+//    public int getCurrentVolume() {
+//        return currentVolume;
+//    }  // Узнать громкость
+//
     public void setCurrentVolume(int newCurrentVolume) { // Выставить громкость
         if (newCurrentVolume > 100) {
             currentVolume = 100;
@@ -59,7 +67,7 @@ public class Radio {
             currentVolume = newCurrentVolume;
         }
     }
-
+//
     public void increaseVolume() { // Увеличение громкости
         if (currentVolume < 100) {
             currentVolume++;

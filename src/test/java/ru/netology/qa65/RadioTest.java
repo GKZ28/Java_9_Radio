@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions;
 public class RadioTest {
 // ТЕСТЫ ГРОМКОСТЬ --------------------------------------------------------
 
-    Radio radio = new Radio(20);
+    Radio radio = new Radio(20,0,0);
 
     @Test  // ВЫСТАВЛЕНИЕ ГРОМКОСТИ
 
