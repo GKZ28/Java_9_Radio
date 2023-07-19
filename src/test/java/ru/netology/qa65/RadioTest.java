@@ -182,4 +182,15 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
+    // LOMBOK TESTS
+
+    @Test
+
+    public void shouldSetNumberOfStation() {
+        radio.setNumberOfStations(20);
+        radio.getNumberOfStations();
+        radio.canEqual(20,20,20);
+
+    }
 }
