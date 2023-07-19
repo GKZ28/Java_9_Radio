@@ -1,7 +1,7 @@
 package ru.netology.qa65;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 // ТЕСТЫ ГРОМКОСТЬ --------------------------------------------------------

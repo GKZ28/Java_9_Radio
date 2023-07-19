@@ -7,14 +7,17 @@ public class Radio {
     private int currentVolume = 0; // значение громкости
     private int lastStation = numberOfStations - 1; // номер последней станции
 
-    public Radio (int numberOfStations) {
+    public Radio(int numberOfStations) {
         this.numberOfStations = numberOfStations;
         this.lastStation = numberOfStations - 1;
-      }
+    }
 
-    public Radio() {}
+    public Radio() {
+    }
 
-    public int getCurrentStation() {return currentStation;} // узнать станцию
+    public int getCurrentStation() {
+        return currentStation;
+    } // узнать станцию
 
     public void setCurrentStation(int newCurrentStation) { // выставить станцию
         if (newCurrentStation > lastStation) {
@@ -41,7 +44,6 @@ public class Radio {
             currentStation = lastStation;
         }
     }
-
 
 
     //__________________________________________________________________________________-
