@@ -15,7 +15,7 @@ public class Radio {
     private int currentVolume = 0; // значение громкости
 
 
-//    public Radio (int numberOfStations) {
+    //    public Radio (int numberOfStations) {
 //        this.numberOfStations = numberOfStations;
 //        this.lastStation = numberOfStations - 1;
 //      }
@@ -33,7 +33,8 @@ public class Radio {
             currentStation = newCurrentStation;
         }
     }
-//
+
+    //
     public void nextStation() { // Переключить станцию вперед
         if (currentStation < numberOfStations - 1) {
             currentStation++;
@@ -49,7 +50,8 @@ public class Radio {
             currentStation = numberOfStations - 1;
         }
     }
-//
+
+    //
 //
 //
 //    //__________________________________________________________________________________-
@@ -67,7 +69,8 @@ public class Radio {
             currentVolume = newCurrentVolume;
         }
     }
-//
+
+    //
     public void increaseVolume() { // Увеличение громкости
         if (currentVolume < 100) {
             currentVolume++;
@@ -80,4 +83,4 @@ public class Radio {
         }
     }
 
-}
+}пше 

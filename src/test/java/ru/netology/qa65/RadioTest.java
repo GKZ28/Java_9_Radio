@@ -1,12 +1,12 @@
 package ru.netology.qa65;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 // ТЕСТЫ ГРОМКОСТЬ --------------------------------------------------------
 
-    Radio radio = new Radio(20,0,0);
+    Radio radio = new Radio(20, 0, 0);
 
     @Test  // ВЫСТАВЛЕНИЕ ГРОМКОСТИ
 
@@ -183,14 +183,4 @@ public class RadioTest {
 
     }
 
-    // LOMBOK TESTS
-
-    @Test
-
-    public void shouldSetNumberOfStation() {
-        radio.setNumberOfStations(20);
-        radio.getNumberOfStations();
-        radio.canEqual(20,20,20);
-
-    }
 }
